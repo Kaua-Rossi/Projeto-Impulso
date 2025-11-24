@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validacao de Formulario</title>
+    <style>
+      input:invalid {
+        border: 2px solid red;
+      }
+      input:valid {
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input
+        type="email"
+        placeholder="Digite seu E-mail"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        title="exemplo@dominio.com.br"
+      />
+      <input
+        type="password"
+        placeholder="Digite sua senha"
+        required
+        minlength="8"
+      />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
